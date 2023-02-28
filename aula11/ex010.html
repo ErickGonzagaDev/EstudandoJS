@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <label for="ivel">Digite sua Velocidade:</label>
+    <input type="number" name="vel" id="ivel">
+
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">Resultado: </div>
+    
+
+    <script>
+        function verificar(){
+            var tVel = document.getElementById('ivel')
+            //pegou oq tava dentro da variavel como string
+
+            var vel = Number(tVel.value) // recebeu apenas o valor
+
+           velocidade(vel) // chamou e enviou os dados para função
+        }
+
+        function velocidade(vel){ //fez a verificação 
+            var res = document.getElementById('res')
+            
+            if(vel > 60){
+                
+                res.innerText = (`Resultado: MULTADO`)
+            }
+            else{
+                res.innerText = (`Boa meu fi!`)
+            }
+        }
+    </script>
+</body>
+</html>

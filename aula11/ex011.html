@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+</head>
+<body>
+    <h1>País</h1>
+    <label for="ipais">Digite seu PAÍS: </label>
+    <input type="text" name="pais" id="ipais" placeholder="Seus país">
+
+    <input type="button" value="Enviar" onclick="enviou()">
+    <div id="res">Resultado: </div>
+
+    <script>
+        function enviou(){
+            var txPais = ((document.getElementById('ipais')).value)
+            var res = document.getElementById('res')
+
+            if(txPais.toLowerCase() == 'brasil'){
+                res.innerHTML = ('Resultado: Brasileiro!')
+            }
+            else{
+                res.innerHTML = ('Resultado = Gringo!')
+            }
+        }
+    </script>
+</body>
+</html>
